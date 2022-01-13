@@ -1,1 +1,1 @@
-web: gunicorn -w 4 -k uvicorn.workers.UvicornWorker fast_api_websocket_server:app
+web: uvicorn src.main:app --host=0.0.0.0 --port=${PORT:-5000}
