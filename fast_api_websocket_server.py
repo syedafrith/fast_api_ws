@@ -100,6 +100,3 @@ async def websocket_endpoint(
             await notifier._notify(f"{data}", room_name)
     except WebSocketDisconnect:
             notifier.remove(websocket, room_name)
-
-if __name__ == "__main__":
-    uvicorn.run(app, host="127.0.0.1", port=8000, log_level="info")
