@@ -1,1 +1,1 @@
-web: gunicorn -w 4 -k uvicorn.workers.UvicornWorker fast_api_websocket_server:app
+web: gunicorn -w 100 -k uvicorn.workers.UvicornWorker fast_api_websocket_server:app
